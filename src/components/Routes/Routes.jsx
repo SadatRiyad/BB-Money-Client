@@ -5,22 +5,26 @@ import Login from "../Auth/Login";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 import MainLayout from "../Layouts/MainLayout/MainLayout";
 import FontPage from "../FontPage/FontPage";
+import Register from "../Auth/Register";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout/>,
-      errorElement: <ErrorPage></ErrorPage>,
+      errorElement: <ErrorPage/>,
       children: [
         {
             path: "/",
-            element: <FontPage></FontPage>,
+            element: <FontPage/>,
         },
         {
             path: "/login",
-            element: <Login></Login>,
+            element: <Login/>,
         },
-
+        {
+            path: "/register",
+            element: <Register/>,
+        },
       ]
     },
     {
